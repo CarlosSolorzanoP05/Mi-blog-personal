@@ -56,10 +56,11 @@ class BlogManager extends React.Component {
       modalComentario: false,
       form: { id: "", categoria: "", titulo: "", contenido: "" },
       commentForm: { id: "", contenido: "" },
-      editCommentForm: { id: "", contenido: "" }, // Nuevo estado para editar comentarios
-      editingCommentId: null, // ID del comentario en edición
+      editCommentForm: { id: "", contenido: "" },
+      editingCommentId: null,
       errorMessage: "",
       blogToComment: null,
+      blogToDeleteId: null,
     };
   }
 
@@ -139,7 +140,10 @@ class BlogManager extends React.Component {
 
     this.setState({
       data: updatedData,
-      modalComentario: false,
+      blogToComment: {
+        ...blogToComment,
+        comentarios: [...blogToComment.comentarios, { id: Date.now(), contenido: commentForm.contenido }]
+      },
       commentForm: { id: "", contenido: "" },
       errorMessage: "",
     });
@@ -152,7 +156,12 @@ class BlogManager extends React.Component {
         : blog
     );
 
-    this.setState({ data: updatedData });
+    const updatedBlogToComment = {
+      ...this.state.blogToComment,
+      comentarios: this.state.blogToComment.comentarios.filter((comment) => comment.id !== commentId)
+    };
+
+    this.setState({ data: updatedData, blogToComment: updatedBlogToComment });
   };
 
   toggleEditComment = (comment) => {
@@ -184,8 +193,18 @@ class BlogManager extends React.Component {
         : blog
     );
 
+    const updatedBlogToComment = {
+      ...blogToComment,
+      comentarios: blogToComment.comentarios.map((comment) =>
+        comment.id === editingCommentId
+          ? { ...comment, contenido: editCommentForm.contenido }
+          : comment
+      )
+    };
+
     this.setState({
       data: updatedData,
+      blogToComment: updatedBlogToComment,
       editCommentForm: { id: "", contenido: "" },
       editingCommentId: null,
     });
