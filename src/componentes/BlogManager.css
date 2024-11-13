@@ -1,0 +1,93 @@
+.blog-card {
+  margin-bottom: 1rem;
+  background-color: #f5f5f5!important;
+}
+
+.btn-edit {
+  background-color: #007bff!important;
+  color: white;
+  border: none;
+  margin-right: 5px;
+}
+
+.btn-delete {
+  background-color: #dc3545 !important;
+  color: white;
+  border: none;
+  margin-right: 5px;
+}
+
+.btn-comments {
+  background-color: #28a745 !important;
+  color: white;
+  border: none;
+}
+
+.modal-btn-save {
+  background-color: #28a745 !important;
+  color: white;
+  border: none;
+}
+
+.modal-btn-cancel {
+  background-color: #f50000 !important;
+  color: white;
+  border: none;
+}
+
+.modal-btn-delete-confirm {
+  background-color: #dc3545 !important;
+  color: white;
+  border: none;
+}
+
+.comment-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.btn-edit-comment {
+  background-color: #ffc107 !important;
+  color: white;
+  border: none;
+}
+
+.btn-delete-comment {
+  background-color: #dc3545 !important;
+  color: white;
+  border: none;
+}
+
+.btn-add {
+  background-color: #070e09 !important;
+  color: white;
+  border: none;
+}
+
+.btn-add-comment {
+  background-color: #007bff !important;
+  color: white;
+  border: none;
+}
+.modal-btn-delete{
+  background-color: #dc3545 !important;
+  color: white;
+  border: none;
+}
+.btn-cancel-delete{
+  background-color: #000000 !important;
+  color: white;
+  border: none;
+}
+.btn-create{
+  background-color: #28a745 !important;
+  color: white;
+  border: none;
+}
+.btn-cancel{
+  background-color: #dc3545 !important;
+  color: white;
+  border: none;
+}

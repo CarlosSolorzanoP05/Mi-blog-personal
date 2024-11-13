@@ -1,0 +1,45 @@
+.presentacion {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: #f5f5f5;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.Presentacion-imagen {
+    width: 100%; /* Ajusta el tamaño según lo necesites */
+    height: auto;
+    border-radius: 10px;
+}
+
+.Presentacion-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 1em;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.Presentacion-texto h2 {
+    font-size: 2rem;
+}
+
+.Presentacion-texto p {
+    font-size: 1.2rem;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+}

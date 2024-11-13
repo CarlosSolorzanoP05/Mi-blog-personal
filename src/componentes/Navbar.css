@@ -1,0 +1,99 @@
+.Cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    /* Agrega un borde inferior para mejorar el diseño */
+    border-bottom: 2px solid #444;
+}
+
+.Cabecera-h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.Cabecera-a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.Cabecera-a:hover {
+    /* Cambia el color en hover para mejor accesibilidad */
+    color: #ddd;
+}
+
+.Cabecera-nav {
+    display: flex;
+    /* Agrega espacio entre el título y la navegación */
+    gap: 15px;
+}
+
+.Cabecera-ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.Cabecera-li {
+    font-size: 1rem;
+}
+
+.Cabecera-auth {
+    display: flex;
+    gap: 15px;
+}
+
+.Cabecera-link {
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.Cabecera-link:hover {
+    background-color: #fff;
+    color: #333;
+    border-color: #333;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .navbar-logo .navbar-link {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-menu li .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .navbar-menu li .navbar-link:hover {
+    color: #ddd;
+  }
